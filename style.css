@@ -13,43 +13,27 @@ body {
   background: #f4f6f9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Noto Sans KR", sans-serif;
-  color: #0f172a;
+  color: #111827;
 }
 
 .card {
-  position: relative;
   width: 100%;
-  max-width: 450px;
-  padding: 46px 36px 40px;
+  max-width: 460px;
+  padding: 48px 42px;
   background: #ffffff;
-  border: 2px solid #0a86bb;
-  border-radius: 10px;
-  text-align: center;
-  overflow: hidden;
-  box-shadow:
-    0 8px 20px rgba(15, 23, 42, 0.08),
-    0 24px 70px rgba(15, 23, 42, 0.12);
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  background: #0a86bb;
+  border: 1px solid #0a86bb;
+  border-radius: 6px;
+  text-align: left;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
 }
 
 .profile-image {
-  width: 142px;
-  height: 142px;
-  margin: 0 auto 28px;
+  width: 116px;
+  height: 116px;
+  margin-bottom: 32px;
   overflow: hidden;
   background: #e5e7eb;
-  border: 3px solid #0a86bb;
-  border-radius: 10px;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14);
+  border-radius: 4px;
 }
 
 .profile-image img {
@@ -61,63 +45,56 @@ body {
 
 .name {
   margin-bottom: 10px;
-  font-size: 38px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  color: #0f172a;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #111827;
 }
 
 .role {
-  margin-bottom: 34px;
+  margin-bottom: 38px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: #0a86bb;
-  letter-spacing: 2px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
 }
 
 .contact-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #dbeafe;
+  gap: 0;
+  border-top: 1px solid #e5e7eb;
 }
 
 .contact-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 72px 1fr;
   align-items: center;
-  gap: 16px;
-  padding: 18px 4px;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e7eb;
   background: transparent;
-  border-bottom: 1px solid #dbeafe;
   text-align: left;
 }
 
 .icon {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eff6ff;
-  border: 1px solid rgba(10, 134, 187, 0.25);
-  border-radius: 8px;
-  font-size: 19px;
+  display: none;
 }
 
 .label {
-  margin-bottom: 4px;
-  font-size: 11px;
+  margin: 0;
+  font-size: 12px;
   font-weight: 700;
-  color: #64748b;
-  letter-spacing: 1px;
+  color: #6b7280;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .value {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1e293b;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
   word-break: break-all;
 }
 
@@ -132,24 +109,19 @@ a:hover {
 
 @media (max-width: 480px) {
   .card {
-    padding: 38px 24px 34px;
-    border-radius: 8px;
+    padding: 40px 28px;
   }
 
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   .name {
     font-size: 31px;
   }
 
-  .role {
-    font-size: 12px;
-  }
-
   .contact-item {
-    padding: 16px 2px;
+    grid-template-columns: 64px 1fr;
   }
 }
