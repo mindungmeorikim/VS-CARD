@@ -4,15 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>웹 명함 카드</title>
-
-  <!-- CSS 연결 -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <main class="card">
     <div class="profile-image">
-      <img src="./samsung.jpg" alt="프로필 이미지" />
+      <img src="./sea1.jpg" alt="프로필 이미지" />
     </div>
 
     <h1 class="name">김민경</h1>
@@ -20,28 +18,29 @@
 
     <section class="contact-list" aria-label="연락처 정보">
       <div class="contact-item">
-        <div class="icon">📧</div>
-        <div>
-          <div class="label">Email</div>
-          <a class="value" href="mailto:hello@example.com">
-            hello@example.com
-          </a>
+        <div class="contact-info">
+          <span class="label">Email</span>
+          <a class="value" href="mailto:mk.minnie.kim61@gmail.com">mk.minnie.kim61@gmail.com</a>
         </div>
+
+        <button class="copy-button" type="button" data-copy="mk.minnie.kim61@gmail.com">
+          이메일 복사
+        </button>
       </div>
 
       <div class="contact-item">
-        <div class="icon">📱</div>
-        <div>
-          <div class="label">Phone</div>
-          <a class="value" href="tel:01012345678">
-            010-1234-5678
-          </a>
+        <div class="contact-info">
+          <span class="label">Phone</span>
+          <a class="value" href="tel:01042643395">010-4264-3395</a>
         </div>
+
+        <button class="copy-button" type="button" data-copy="010-4264-3395">
+          번호 복사
+        </button>
       </div>
     </section>
   </main>
 
-  <!-- JavaScript 연결 -->
   <script src="script.js"></script>
 </body>
 </html>

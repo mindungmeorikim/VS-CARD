@@ -19,7 +19,8 @@ body {
 .card {
   width: 100%;
   max-width: 460px;
-  padding: 48px 42px;
+  min-height: 620px;
+  padding: 56px 42px;
   background: #ffffff;
   border: 1px solid #0a86bb;
   border-radius: 6px;
@@ -30,7 +31,7 @@ body {
 .profile-image {
   width: 116px;
   height: 116px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   overflow: hidden;
   background: #e5e7eb;
   border-radius: 4px;
@@ -52,7 +53,7 @@ body {
 }
 
 .role {
-  margin-bottom: 38px;
+  margin-bottom: 56px;
   font-size: 13px;
   font-weight: 600;
   color: #0a86bb;
@@ -68,14 +69,20 @@ body {
 
 .contact-item {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: minmax(0, 1fr) 96px;
   align-items: center;
   gap: 18px;
-  padding: 18px 0;
+  padding: 22px 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
+.contact-info {
+  min-width: 0;
+}
+
 .label {
+  display: block;
+  margin-bottom: 6px;
   font-size: 12px;
   font-weight: 700;
   color: #6b7280;
@@ -84,16 +91,45 @@ body {
 }
 
 .value {
+  display: block;
+  min-width: 0;
   font-size: 15px;
   font-weight: 600;
   color: #111827;
-
-  /* 줄바꿈 방지 */
   white-space: nowrap;
-
-  /* 영역 넘칠 경우 ... 처리 */
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.copy-button {
+  height: 36px;
+  border: 1px solid #0a86bb;
+  background: #ffffff;
+  color: #0a86bb;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.copy-button:hover {
+  background: #0a86bb;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(10, 134, 187, 0.18);
+}
+
+.copy-button:active {
+  transform: scale(0.96);
+}
+
+.copy-button.is-copied {
+  background: #0a86bb;
+  color: #ffffff;
 }
 
 a {
@@ -107,12 +143,14 @@ a:hover {
 
 @media (max-width: 480px) {
   .card {
-    padding: 40px 28px;
+    min-height: 580px;
+    padding: 42px 28px;
   }
 
   .profile-image {
     width: 100px;
     height: 100px;
+    margin-bottom: 34px;
   }
 
   .name {
@@ -120,11 +158,16 @@ a:hover {
   }
 
   .role {
+    margin-bottom: 44px;
     font-size: 12px;
   }
 
   .contact-item {
-    grid-template-columns: 55px 1fr;
-    gap: 14px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .copy-button {
+    width: 100%;
   }
 }
