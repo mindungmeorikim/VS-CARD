@@ -8,79 +8,110 @@
 </head>
 
 <body>
-  <main class="card">
-    <div class="profile-image">
-      <img src="./samsung.jpg" alt="프로필 이미지" />
+  <main class="card" aria-label="김민경 웹 명함">
+    <div class="card-inner">
+      <section class="card-face card-front">
+        <div class="profile-image">
+          <img src="./samsung.jpg" alt="프로필 이미지" />
+        </div>
+
+        <section class="intro">
+          <p class="eyebrow">GAME BUSINESS PM</p>
+          <h1 class="name">김민경</h1>
+          <p class="role">게임 서비스를 성장시키는 사업PM</p>
+          <p class="description">
+            커뮤니케이션과 데이터를 바탕으로 유저 경험과 사업 성과를 연결합니다.
+          </p>
+        </section>
+
+        <section class="contact-list" aria-label="연락처 정보">
+          <div class="contact-item">
+            <div class="contact-info">
+              <span class="label">Email</span>
+              <a class="value" href="mailto:mk.minnie.kim61@gmail.com">
+                mk.minnie.kim61@gmail.com
+              </a>
+            </div>
+
+            <button class="copy-button" type="button" data-copy="mk.minnie.kim61@gmail.com">
+              이메일 복사
+            </button>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-info">
+              <span class="label">Phone</span>
+              <a class="value" href="tel:01042643395">
+                010-4264-3395
+              </a>
+            </div>
+
+            <button class="copy-button" type="button" data-copy="010-4264-3395">
+              번호 복사
+            </button>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-info">
+              <span class="label">Portfolio</span>
+              <a
+                class="value"
+                href="https://drive.google.com/drive/folders/1nd20hIQ0P3Sd3OAfXQK5DrqZESCTa5pS?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                대표 포트폴리오
+              </a>
+            </div>
+
+            <a
+              class="link-button"
+              href="https://drive.google.com/drive/folders/1nd20hIQ0P3Sd3OAfXQK5DrqZESCTa5pS?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              링크 열기
+            </a>
+          </div>
+        </section>
+
+        <p class="flip-guide">빈 공간을 클릭하면 핵심 역량을 볼 수 있어요</p>
+      </section>
+
+      <section class="card-face card-back">
+        <p class="eyebrow">CORE PROFILE</p>
+        <h2 class="back-title">사업PM 역량</h2>
+
+        <div class="skill-group">
+          <h3>Core Skills</h3>
+          <div class="tag-list">
+            <span>사업 기획</span>
+            <span>라이브 운영</span>
+            <span>데이터 분석</span>
+            <span>이벤트 기획</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Interest</h3>
+          <div class="tag-list">
+            <span>라이브 서비스</span>
+            <span>유저 리텐션</span>
+            <span>BM 설계</span>
+            <span>유저 커뮤니케이션</span>
+          </div>
+        </div>
+
+        <div class="summary-box">
+          <strong>PM Keyword</strong>
+          <p>
+            유저 관점과 사업 목표를 함께 고려하며, 운영 이슈를 구조화하고 실행 가능한 개선안으로 연결합니다.
+          </p>
+        </div>
+
+        <p class="flip-guide">다시 클릭하면 앞면으로 돌아갑니다</p>
+      </section>
     </div>
-
-    <section class="intro">
-      <p class="eyebrow">GAME BUSINESS PM</p>
-      <h1 class="name">김민경</h1>
-      <p class="role">게임 서비스를 성장시키는 사업PM</p>
-      <p class="description">
-        커뮤니케이션과 데이터를 바탕으로 유저 경험과 사업 성과를 연결합니다.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Core Skills</h2>
-      <div class="skill-list">
-        <span>사업 기획</span>
-        <span>라이브 운영</span>
-        <span>데이터 분석</span>
-        <span>이벤트 기획</span>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Interest</h2>
-      <div class="interest-list">
-        <span>라이브 서비스</span>
-        <span>유저 리텐션</span>
-        <span>BM 설계</span>
-      </div>
-    </section>
-
-    <section class="contact-list" aria-label="연락처 정보">
-      <div class="contact-item">
-        <div class="contact-info">
-          <span class="label">Email</span>
-          <a class="value" href="mailto:mk.minnie.kim61@gmail.com">
-            mk.minnie.kim61@gmail.com
-          </a>
-        </div>
-
-        <button class="copy-button" type="button" data-copy="mk.minnie.kim61@gmail.com">
-          이메일 복사
-        </button>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-info">
-          <span class="label">Phone</span>
-          <a class="value" href="tel:01042643395">
-            010-4264-3395
-          </a>
-        </div>
-
-        <button class="copy-button" type="button" data-copy="010-4264-3395">
-          번호 복사
-        </button>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-info">
-          <span class="label">Portfolio</span>
-          <a class="value" href="#" target="_blank" rel="noopener noreferrer">
-            포트폴리오 링크를 입력하세요
-          </a>
-        </div>
-
-        <button class="copy-button" type="button" data-copy="포트폴리오 링크를 입력하세요">
-          링크 복사
-        </button>
-      </div>
-    </section>
   </main>
 
   <script src="script.js"></script>

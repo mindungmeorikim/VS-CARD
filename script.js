@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const card = document.querySelector(".card");
   const copyButtons = document.querySelectorAll(".copy-button");
+
+  card.addEventListener("click", (event) => {
+    const isInteractiveElement = event.target.closest("a, button");
+
+    if (isInteractiveElement) {
+      return;
+    }
+
+    card.classList.toggle("is-flipped");
+  });
 
   copyButtons.forEach((button) => {
     const defaultText = button.textContent.trim();
