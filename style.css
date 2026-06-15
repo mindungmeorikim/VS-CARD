@@ -25,7 +25,7 @@ body {
 .card-inner {
   position: relative;
   width: 100%;
-  min-height: 680px;
+  min-height: 735px;
   transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
   transform-style: preserve-3d;
 }
@@ -63,7 +63,7 @@ body {
 
 .back-top-area {
   justify-content: flex-end;
-  margin-bottom: 42px;
+  margin-bottom: 38px;
 }
 
 .profile-image {
@@ -123,6 +123,7 @@ body {
   font-weight: 700;
   color: #55758a;
   letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .name {
@@ -220,7 +221,7 @@ body {
 }
 
 .skill-group {
-  padding: 26px 0;
+  padding: 22px 0;
   border-top: 1px solid #e5e7eb;
 }
 
@@ -254,8 +255,23 @@ body {
   color: #334155;
 }
 
+.about-list {
+  padding-left: 18px;
+}
+
+.about-list li {
+  margin-bottom: 9px;
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.about-list li:last-child {
+  margin-bottom: 0;
+}
+
 .summary-box {
-  margin-top: 28px;
+  margin-top: 22px;
   padding: 18px;
   background: #f8fbfc;
   border-left: 3px solid #2f6f8f;
@@ -284,7 +300,7 @@ a:hover {
 
 @media (max-width: 480px) {
   .card-inner {
-    min-height: 735px;
+    min-height: 780px;
   }
 
   .card-face {
