@@ -50,11 +50,20 @@ body {
   transform: rotateY(180deg);
 }
 
-.top-area {
+.top-area,
+.back-top-area {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.top-area {
   margin-bottom: 36px;
+}
+
+.back-top-area {
+  justify-content: flex-end;
+  margin-bottom: 42px;
 }
 
 .profile-image {
@@ -102,10 +111,6 @@ body {
 .more-button:active,
 .back-button:active {
   transform: scale(0.96);
-}
-
-.back-button {
-  margin-bottom: 34px;
 }
 
 .intro {
@@ -214,17 +219,14 @@ body {
   color: #ffffff;
 }
 
-.back-title {
-  margin-bottom: 34px;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  color: #1f2937;
+.skill-group {
+  padding: 26px 0;
+  border-top: 1px solid #e5e7eb;
 }
 
-.skill-group {
-  padding: 24px 0;
-  border-top: 1px solid #e5e7eb;
+.skill-group.first {
+  border-top: none;
+  padding-top: 0;
 }
 
 .skill-group h3 {
@@ -253,7 +255,7 @@ body {
 }
 
 .summary-box {
-  margin-top: 26px;
+  margin-top: 28px;
   padding: 18px;
   background: #f8fbfc;
   border-left: 3px solid #2f6f8f;
