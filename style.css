@@ -65,7 +65,7 @@ body {
 
 .back-top-area {
   justify-content: flex-end;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .profile-image {
@@ -228,7 +228,7 @@ body {
 }
 
 .skill-group.first {
-  margin-top: auto;
+  margin-top: 0;
   border-top: none;
   padding-top: 0;
 }
@@ -275,7 +275,6 @@ body {
 
 .summary-box {
   margin-top: 16px;
-  margin-bottom: auto;
   padding: 16px 18px;
   background: #f8fbfc;
   border-left: 3px solid #2f6f8f;
