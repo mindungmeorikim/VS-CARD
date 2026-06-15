@@ -17,29 +17,39 @@ body {
 }
 
 .card {
+  position: relative;
   width: 100%;
   max-width: 450px;
-  padding: 42px 32px;
+  padding: 46px 36px 40px;
   background: #ffffff;
   border: 2px solid #0a86bb;
-  border-radius: 28px;
+  border-radius: 10px;
   text-align: center;
+  overflow: hidden;
   box-shadow:
-    0 22px 50px rgba(15, 23, 42, 0.1),
-    0 0 0 6px rgba(10, 134, 187, 0.06);
+    0 8px 20px rgba(15, 23, 42, 0.08),
+    0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: #0a86bb;
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 24px;
-  border-radius: 50%;
+  width: 142px;
+  height: 142px;
+  margin: 0 auto 28px;
   overflow: hidden;
   background: #e5e7eb;
-  border: 6px solid #ffffff;
-  box-shadow:
-    0 10px 30px rgba(15, 23, 42, 0.14),
-    0 0 0 2px rgba(10, 134, 187, 0.18);
+  border: 3px solid #0a86bb;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14);
 }
 
 .profile-image img {
@@ -50,61 +60,58 @@ body {
 }
 
 .name {
-  margin-bottom: 8px;
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  margin-bottom: 10px;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
   color: #0f172a;
 }
 
 .role {
-  margin-bottom: 32px;
-  font-size: 17px;
-  color: #475569;
+  margin-bottom: 34px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0a86bb;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  border-top: 1px solid #dbeafe;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 18px;
-  background: #f8fafc;
-  border: 1px solid rgba(10, 134, 187, 0.22);
-  border-radius: 18px;
+  gap: 16px;
+  padding: 18px 4px;
+  background: transparent;
+  border-bottom: 1px solid #dbeafe;
   text-align: left;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.contact-item:hover {
-  transform: translateY(-2px);
-  border-color: rgba(10, 134, 187, 0.45);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
 .icon {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  border: 1px solid rgba(10, 134, 187, 0.12);
-  border-radius: 14px;
-  font-size: 22px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  background: #eff6ff;
+  border: 1px solid rgba(10, 134, 187, 0.25);
+  border-radius: 8px;
+  font-size: 19px;
 }
 
 .label {
   margin-bottom: 4px;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 700;
   color: #64748b;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .value {
@@ -125,7 +132,8 @@ a:hover {
 
 @media (max-width: 480px) {
   .card {
-    padding: 32px 22px;
+    padding: 38px 24px 34px;
+    border-radius: 8px;
   }
 
   .profile-image {
@@ -134,10 +142,14 @@ a:hover {
   }
 
   .name {
-    font-size: 28px;
+    font-size: 31px;
   }
 
   .role {
-    font-size: 15px;
+    font-size: 12px;
+  }
+
+  .contact-item {
+    padding: 16px 2px;
   }
 }
