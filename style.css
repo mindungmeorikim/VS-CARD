@@ -25,7 +25,7 @@ body {
 .card-inner {
   position: relative;
   width: 100%;
-  min-height: 660px;
+  min-height: 680px;
   transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
   transform-style: preserve-3d;
 }
@@ -54,7 +54,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
 }
 
 .profile-image {
@@ -139,6 +139,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 28px;
 }
 
 .contact-item {
@@ -281,7 +282,7 @@ a:hover {
 
 @media (max-width: 480px) {
   .card-inner {
-    min-height: 720px;
+    min-height: 735px;
   }
 
   .card-face {
