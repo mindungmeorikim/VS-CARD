@@ -37,7 +37,7 @@ body {
 .card-face {
   position: absolute;
   inset: 0;
-  padding: 42px;
+  padding: 40px;
   background: #ffffff;
   border: 1px solid #8dbfd3;
   border-radius: 8px;
@@ -109,19 +109,7 @@ body {
 }
 
 .intro {
-  position: relative;
   margin-bottom: 34px;
-  padding-right: 42px;
-}
-
-.intro::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 0;
-  width: 1px;
-  height: 112px;
-  background: #d7dde3;
 }
 
 .eyebrow {
@@ -141,31 +129,24 @@ body {
 }
 
 .role {
-  margin-bottom: 10px;
   font-size: 14px;
   font-weight: 500;
   color: #2f6f8f;
   line-height: 1.5;
 }
 
-.description {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #7b8490;
-}
-
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .contact-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 96px;
+  grid-template-columns: minmax(0, 1fr) 92px;
   align-items: center;
-  gap: 16px;
-  padding: 16px;
+  gap: 14px;
+  padding: 14px 16px;
   background: #f8fbfd;
   border: 1px solid #d7e8f1;
   border-radius: 8px;
@@ -194,11 +175,12 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
 }
 
 .copy-button,
 .link-button {
-  height: 36px;
+  height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -299,7 +281,7 @@ a:hover {
 
 @media (max-width: 480px) {
   .card-inner {
-    min-height: 700px;
+    min-height: 720px;
   }
 
   .card-face {
@@ -309,14 +291,6 @@ a:hover {
   .profile-image {
     width: 100px;
     height: 100px;
-  }
-
-  .intro {
-    padding-right: 0;
-  }
-
-  .intro::after {
-    display: none;
   }
 
   .name {
