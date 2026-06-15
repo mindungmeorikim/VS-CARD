@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>웹 명함 카드</title>
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="card">
+    <div class="profile-image">
+      <img src="./samsung.jpg" alt="프로필 이미지" />
+    </div>
+
+    <h1 class="name">김민경</h1>
+    <p class="role">Frontend & Backend Developer</p>
+
+    <section class="contact-list" aria-label="연락처 정보">
+      <div class="contact-item">
+        <div class="icon">📧</div>
+        <div>
+          <div class="label">Email</div>
+          <a class="value" href="mailto:hello@example.com">
+            hello@example.com
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="icon">📱</div>
+        <div>
+          <div class="label">Phone</div>
+          <a class="value" href="tel:01012345678">
+            010-1234-5678
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript 연결 -->
+  <script src="script.js"></script>
+</body>
+</html>
