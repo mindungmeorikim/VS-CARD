@@ -13,20 +13,19 @@ body {
   background: #f4f6f9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Noto Sans KR", sans-serif;
-  color: #111827;
+  color: #1f2937;
 }
 
 .card {
   width: 100%;
   max-width: 460px;
-  min-height: 700px;
   perspective: 1200px;
 }
 
 .card-inner {
   position: relative;
   width: 100%;
-  min-height: 700px;
+  min-height: 640px;
   transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
   transform-style: preserve-3d;
 }
@@ -38,11 +37,11 @@ body {
 .card-face {
   position: absolute;
   inset: 0;
-  padding: 42px 42px 38px;
+  padding: 42px;
   background: #ffffff;
-  border: 1px solid #0a86bb;
-  border-radius: 6px;
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+  border: 1px solid #8dbfd3;
+  border-radius: 8px;
+  box-shadow: 0 22px 60px rgba(30, 58, 78, 0.08);
   backface-visibility: hidden;
   overflow: hidden;
 }
@@ -77,29 +76,25 @@ body {
 .back-button {
   height: 36px;
   padding: 0 14px;
-  border: 1px solid #dbeafe;
-  background: #f8fcfe;
-  color: #075f8a;
+  border: 1px solid #c7dbe5;
+  background: #ffffff;
+  color: #2f6f8f;
   border-radius: 4px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: transform 0.12s ease, background-color 0.18s ease,
     color 0.18s ease, border-color 0.18s ease;
 }
 
 .more-button span {
-  display: inline-block;
   margin-left: 4px;
-  font-size: 18px;
-  line-height: 1;
-  vertical-align: -1px;
 }
 
 .more-button:hover,
 .back-button:hover {
-  background: #075f8a;
-  border-color: #075f8a;
+  background: #2f6f8f;
+  border-color: #2f6f8f;
   color: #ffffff;
 }
 
@@ -113,15 +108,15 @@ body {
 }
 
 .intro {
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 .eyebrow {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 12px;
   font-weight: 700;
-  color: #075f8a;
-  letter-spacing: 0.18em;
+  color: #2f6f8f;
+  letter-spacing: 0.16em;
 }
 
 .name {
@@ -129,26 +124,26 @@ body {
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.04em;
-  color: #111827;
+  color: #1f2937;
 }
 
 .role {
   margin-bottom: 12px;
   font-size: 14px;
   font-weight: 500;
-  color: #075f8a;
+  color: #2f6f8f;
 }
 
 .description {
   font-size: 14px;
   line-height: 1.6;
-  color: #64748b;
+  color: #6b7280;
 }
 
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .contact-item {
@@ -156,7 +151,6 @@ body {
   grid-template-columns: minmax(0, 1fr) 96px;
   align-items: center;
   gap: 18px;
-  padding: 4px 0;
 }
 
 .contact-info {
@@ -168,7 +162,7 @@ body {
   margin-bottom: 6px;
   font-size: 12px;
   font-weight: 700;
-  color: #6b7280;
+  color: #7b8490;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -178,7 +172,7 @@ body {
   min-width: 0;
   font-size: 15px;
   font-weight: 400;
-  color: #075f8a;
+  color: #2f6f8f;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -190,12 +184,12 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #0a86bb;
+  border: 1px solid #8dbfd3;
   background: #ffffff;
-  color: #075f8a;
+  color: #2f6f8f;
   border-radius: 4px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.12s ease, background-color 0.18s ease,
@@ -204,9 +198,9 @@ body {
 
 .copy-button:hover,
 .link-button:hover {
-  background: #075f8a;
+  background: #2f6f8f;
   color: #ffffff;
-  box-shadow: 0 8px 18px rgba(10, 134, 187, 0.18);
+  box-shadow: 0 8px 18px rgba(47, 111, 143, 0.16);
 }
 
 .copy-button:active,
@@ -215,7 +209,7 @@ body {
 }
 
 .copy-button.is-copied {
-  background: #075f8a;
+  background: #2f6f8f;
   color: #ffffff;
 }
 
@@ -224,7 +218,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: -0.04em;
-  color: #111827;
+  color: #1f2937;
 }
 
 .skill-group {
@@ -235,8 +229,8 @@ body {
 .skill-group h3 {
   margin-bottom: 14px;
   font-size: 13px;
-  font-weight: 800;
-  color: #6b7280;
+  font-weight: 700;
+  color: #7b8490;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -249,32 +243,32 @@ body {
 
 .tag-list span {
   padding: 8px 11px;
-  border: 1px solid #d7eaf3;
-  background: #f8fcfe;
+  border: 1px solid #d8e8ef;
+  background: #f8fbfc;
   border-radius: 4px;
   font-size: 13px;
-  font-weight: 600;
-  color: #1f2937;
+  font-weight: 500;
+  color: #334155;
 }
 
 .summary-box {
   margin-top: 26px;
   padding: 18px;
-  background: #f8fafc;
-  border-left: 3px solid #075f8a;
+  background: #f8fbfc;
+  border-left: 3px solid #2f6f8f;
 }
 
 .summary-box strong {
   display: block;
   margin-bottom: 8px;
   font-size: 13px;
-  color: #075f8a;
+  color: #2f6f8f;
 }
 
 .summary-box p {
   font-size: 14px;
   line-height: 1.7;
-  color: #4b5563;
+  color: #6b7280;
 }
 
 a {
@@ -282,17 +276,16 @@ a {
 }
 
 a:hover {
-  color: #075f8a;
+  color: #1d5874;
 }
 
 @media (max-width: 480px) {
-  .card,
   .card-inner {
-    min-height: 720px;
+    min-height: 660px;
   }
 
   .card-face {
-    padding: 36px 28px 34px;
+    padding: 36px 28px;
   }
 
   .profile-image {
