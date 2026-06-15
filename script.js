@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const card = document.querySelector(".card");
+  const moreButton = document.querySelector(".more-button");
+  const backButton = document.querySelector(".back-button");
   const copyButtons = document.querySelectorAll(".copy-button");
 
-  card.addEventListener("click", (event) => {
-    const isInteractiveElement = event.target.closest("a, button");
+  moreButton.addEventListener("click", () => {
+    card.classList.add("is-flipped");
+  });
 
-    if (isInteractiveElement) {
-      return;
-    }
-
-    card.classList.toggle("is-flipped");
+  backButton.addEventListener("click", () => {
+    card.classList.remove("is-flipped");
   });
 
   copyButtons.forEach((button) => {

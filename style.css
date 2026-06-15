@@ -19,15 +19,14 @@ body {
 .card {
   width: 100%;
   max-width: 460px;
-  min-height: 620px;
+  min-height: 700px;
   perspective: 1200px;
-  cursor: pointer;
 }
 
 .card-inner {
   position: relative;
   width: 100%;
-  min-height: 620px;
+  min-height: 700px;
   transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
   transform-style: preserve-3d;
 }
@@ -39,22 +38,29 @@ body {
 .card-face {
   position: absolute;
   inset: 0;
-  padding: 44px 42px;
+  padding: 42px 42px 38px;
   background: #ffffff;
   border: 1px solid #0a86bb;
   border-radius: 6px;
   box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .card-back {
   transform: rotateY(180deg);
 }
 
+.top-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
 .profile-image {
   width: 116px;
   height: 116px;
-  margin-bottom: 34px;
   overflow: hidden;
   background: #e5e7eb;
   border-radius: 4px;
@@ -67,8 +73,47 @@ body {
   object-fit: cover;
 }
 
+.more-button,
+.back-button {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #dbeafe;
+  background: #f8fcfe;
+  color: #0a86bb;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.18s ease,
+    color 0.18s ease, border-color 0.18s ease;
+}
+
+.more-button span {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 18px;
+  line-height: 1;
+  vertical-align: -1px;
+}
+
+.more-button:hover,
+.back-button:hover {
+  background: #0a86bb;
+  border-color: #0a86bb;
+  color: #ffffff;
+}
+
+.more-button:active,
+.back-button:active {
+  transform: scale(0.96);
+}
+
+.back-button {
+  margin-bottom: 34px;
+}
+
 .intro {
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .eyebrow {
@@ -81,16 +126,16 @@ body {
 
 .name {
   margin-bottom: 12px;
-  font-size: 40px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
   color: #111827;
 }
 
 .role {
   margin-bottom: 16px;
-  font-size: 16px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
   color: #0a86bb;
 }
 
@@ -111,7 +156,7 @@ body {
   grid-template-columns: minmax(0, 1fr) 96px;
   align-items: center;
   gap: 18px;
-  padding: 18px 0;
+  padding: 17px 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -177,14 +222,14 @@ body {
 
 .back-title {
   margin-bottom: 34px;
-  font-size: 34px;
-  font-weight: 900;
+  font-size: 30px;
+  font-weight: 800;
   letter-spacing: -0.04em;
   color: #111827;
 }
 
 .skill-group {
-  padding: 26px 0;
+  padding: 24px 0;
   border-top: 1px solid #e5e7eb;
 }
 
@@ -233,15 +278,6 @@ body {
   color: #4b5563;
 }
 
-.flip-guide {
-  position: absolute;
-  left: 42px;
-  right: 42px;
-  bottom: 24px;
-  font-size: 12px;
-  color: #9ca3af;
-}
-
 a {
   color: inherit;
 }
@@ -253,11 +289,11 @@ a:hover {
 @media (max-width: 480px) {
   .card,
   .card-inner {
-    min-height: 640px;
+    min-height: 720px;
   }
 
   .card-face {
-    padding: 38px 28px;
+    padding: 36px 28px 34px;
   }
 
   .profile-image {
@@ -266,7 +302,11 @@ a:hover {
   }
 
   .name {
-    font-size: 34px;
+    font-size: 30px;
+  }
+
+  .role {
+    font-size: 13px;
   }
 
   .contact-item {
@@ -277,10 +317,5 @@ a:hover {
   .copy-button,
   .link-button {
     width: 100%;
-  }
-
-  .flip-guide {
-    left: 28px;
-    right: 28px;
   }
 }
