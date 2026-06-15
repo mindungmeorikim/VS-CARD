@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
           button.textContent = defaultText;
           button.classList.remove("is-copied");
         }, 1200);
-      } catch (error) {
+      } catch {
         button.textContent = "실패";
 
         setTimeout(() => {
