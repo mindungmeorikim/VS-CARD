@@ -21,10 +21,12 @@ body {
   max-width: 450px;
   padding: 42px 32px;
   background: #ffffff;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #0a86bb;
   border-radius: 28px;
   text-align: center;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 22px 50px rgba(15, 23, 42, 0.1),
+    0 0 0 6px rgba(10, 134, 187, 0.06);
 }
 
 .profile-image {
@@ -36,8 +38,8 @@ body {
   background: #e5e7eb;
   border: 6px solid #ffffff;
   box-shadow:
-    0 10px 30px rgba(15, 23, 42, 0.12),
-    0 0 0 1px rgba(15, 23, 42, 0.06);
+    0 10px 30px rgba(15, 23, 42, 0.14),
+    0 0 0 2px rgba(10, 134, 187, 0.18);
 }
 
 .profile-image img {
@@ -52,12 +54,13 @@ body {
   font-size: 34px;
   font-weight: 800;
   letter-spacing: -0.04em;
+  color: #0f172a;
 }
 
 .role {
   margin-bottom: 32px;
   font-size: 17px;
-  color: #64748b;
+  color: #475569;
 }
 
 .contact-list {
@@ -72,9 +75,16 @@ body {
   gap: 14px;
   padding: 18px;
   background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(10, 134, 187, 0.22);
   border-radius: 18px;
   text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(10, 134, 187, 0.45);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
 .icon {
@@ -85,6 +95,7 @@ body {
   align-items: center;
   justify-content: center;
   background: #ffffff;
+  border: 1px solid rgba(10, 134, 187, 0.12);
   border-radius: 14px;
   font-size: 22px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
@@ -93,13 +104,13 @@ body {
 .label {
   margin-bottom: 4px;
   font-size: 12px;
-  color: #94a3b8;
+  color: #64748b;
 }
 
 .value {
   font-size: 16px;
-  font-weight: 600;
-  color: #334155;
+  font-weight: 700;
+  color: #1e293b;
   word-break: break-all;
 }
 
@@ -109,7 +120,7 @@ a {
 }
 
 a:hover {
-  color: #2563eb;
+  color: #0a86bb;
 }
 
 @media (max-width: 480px) {
